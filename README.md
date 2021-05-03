@@ -1,5 +1,5 @@
 # seeddms-editdocx
-Extension for SeedDMS that allows for the interactive editing of docx files. Requires a running OnlyOffice server.
+Extension for SeedDMS that allows for the interactive editing of docx files. Requires a running OnlyOffice Document server.
 
 To install, 
 1) Edit the viewer.php and editor.php files inside the editdocx folder to use the URL of your SeedDMS installation.
