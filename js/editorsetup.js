@@ -3,6 +3,8 @@ $(document).ready( function () {
     var doc_name = $('#doc_name').val();
     var doc_id = $('#doc_id').val();
     var doc_key = $('#doc_key').val();
+    var user_id = $('#user_id').val();
+    var user_name = $('#user_name').val();
     doc_name = doc_name.replace('%20', ' ');
     
     var docEditor;
@@ -60,7 +62,8 @@ $(document).ready( function () {
                 "documentType": "text",
                 "document": {
                     "title": doc_name,
-                    "url": "http://<YOUR SEEDDMS URL HERE>/ext/editdocx/download?code=".concat(code),
+                    "url": "https://seed.jhc.yxe.mybluehost.me/ext/editdocx/download?code=".concat(code),
+                    //"url": "https://seed.jhc.yxe.mybluehost.me/ext/editdocx/op.GetFile.php?editdocx_documentid=".concat(editdocx_documentid).concat("&editdocx_documentversion=").concat(editdocx_documentversion),
                     "fileType": "docx",
                     "key": doc_key,
                     "permissions": {
@@ -79,10 +82,10 @@ $(document).ready( function () {
                     "actionLink": null,
                     "mode": "edit",
                     "lang": "en",
-                    "callbackUrl": "http://<YOUR SEEDDMS URL HERE>/ext/editdocx/receiver",
+                    "callbackUrl": "https://seed.jhc.yxe.mybluehost.me/ext/editdocx/receiver",
                     "user": {
-                        "id": "uid-1",
-                        "name": "DOCX Editor"
+                        "id": user_id,
+                        "name": user_name
                     },
                     "customization": {
                         "about": false,
@@ -94,7 +97,7 @@ $(document).ready( function () {
                             "blank": false,
                             "requestClose": false,
                             "text": "Go back to SeedDMS",
-                            "url": "http://<YOUR SEEDDMS URL HERE>/out/out.ViewDocument.php?documentid=".concat(doc_id)
+                            "url": "https://seed.jhc.yxe.mybluehost.me/out/out.ViewDocument.php?documentid=".concat(doc_id)
                         }
                     },
                     "fileChoiceUrl": "",
