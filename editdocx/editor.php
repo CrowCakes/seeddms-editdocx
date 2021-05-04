@@ -40,6 +40,9 @@
 	    };
     }
     
+    $userid = $user->getID();
+    $username = $user->getFullName();
+    
     $docname = '';
     if (isset($_GET["docname"]) && $_GET["docname"] != '') {
         $docname = rawurlencode($_GET["docname"]);
@@ -67,7 +70,7 @@
 <html>
     <head>
         <script type="text/javascript" src="../../views/bootstrap/vendors/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="http://<YOUR SEEDDMS URL HERE>:3090/web-apps/apps/api/documents/api.js"></script>
+        <script type="text/javascript" src="https://jhc.yxe.mybluehost.me:3090/web-apps/apps/api/documents/api.js"></script>
         <script type="text/javascript" src="../../styles/bootstrap/onlyoffice/editorsetup.js"></script>
     </head>
     <body>
@@ -77,6 +80,8 @@
                 <input type="hidden" id="doc_name" value=<?php echo $docname ?>></input>
                 <input type="hidden" id="doc_key" value=<?php echo $documentkey ?>></input>
                 <input type="hidden" id="doc_id" value=<?php echo $documentid ?>></input>
+                <input type="hidden" id="user_id" value=<?php echo $userid ?>></input>
+                <input type="hidden" id="user_name" value="<?php echo $username ?>"></input>
             </form>
             <div id="placeholder"></div>
         </div>
